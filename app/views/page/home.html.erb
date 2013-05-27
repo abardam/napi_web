@@ -1,18 +1,9 @@
-<% provide(:content, raw(BlueCloth.new(File.read('public/test.md')).to_html)) %>
-<div id='contentwr'>
-  <div id='content'>
-    <div class='leftdiv'>
-      <div id='postit'>
-        <div id='posttext'>Application is now closed!</div>
-      </div>
-    </div>
-    <div class='rightdiv'>
-  
-      <%= yield :content %>
-    </div>
-  
+<div class='leftdiv'>
+  <div id='postit'>
+    <div id='posttext'>Application is now closed!</div>
   </div>
-  <div class='footer'>
-    pics here!
-  </div>
+</div>
+<div class='rightdiv'>
+
+  Hello world!
 </div>

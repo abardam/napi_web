@@ -1,3 +1,6 @@
+<% images = (Dir.entries("./app/assets/images/footer") - [".", ".."]).shuffle[0..3] %>
+<% header = ["home", "about", "updates", "application", "travel", "contact"] %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,19 +24,24 @@
         <div id='headerbar'>
         
           <ul id='headermenu'>
-            <li class='button'><a href='#' class='current shadow'><span>home</span></a></li>
-            <li class='button'><a href='#'><span>about napi</span></a></li>
-            <li class='button'><a href='#'><span>live updates</span></a></li>
-            <li class='button'><a href='#'><span>application</span></a></li>
-            <li class='button'><a href='#'><span>travel in japan</span></a></li>
-            <li class='button'><a href='#'><span>contact us</span></a></li>
+            <% header.each do |name| %>
+              <li class='button'><a href= <%= "./#{name}.html" %> <% if @current == name %> class='current shadow' <% end %>><span> <%= name %> </span></a></li>
+            <% end %>
+          
           </ul>
         </div>
       </div>
       
-            
-      <%= yield %>
-      
+      <div id='contentwr'>
+        <div id='content'>
+          <%= yield %>
+        </div>
+        <div id='footer'>
+          <%= image_tag "footer/#{images[0]}" %>
+          <%= image_tag "footer/#{images[1]}" %>
+          <%= image_tag "footer/#{images[2]}" %>
+        </div>
+      </div>
     </div>
     
     
