@@ -7,7 +7,52 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id='bodywr'>
+      <div id='headerbg'>
+        <div id='headerbanner'>
+          <!--<img src='naist-logo.gif' width=300px/>
+          <div id='headertextwr'>
+            <div class='headertext' id='a'>Nara Institute of Science and Technology</div>
+            <div class='headertext' id='b'>Internship</div>
+            
+          </div>-->
+          <canvas id='canvas' width='487' height='95'></canvas>
+        </div>
+        <div id='headerbar'>
+        
+          <ul id='headermenu'>
+            <li class='button'><a href='#' class='current shadow'><span>home</span></a></li>
+            <li class='button'><a href='#'><span>about napi</span></a></li>
+            <li class='button'><a href='#'><span>live updates</span></a></li>
+            <li class='button'><a href='#'><span>application</span></a></li>
+            <li class='button'><a href='#'><span>travel in japan</span></a></li>
+            <li class='button'><a href='#'><span>contact us</span></a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id='contentwr'>
+        <div id='content'>
+          <div class='leftdiv'>
+            <div id='postit'>
+              <div id='posttext'>Application is now closed!</div>
+            </div>
+          </div>
+          <div class='rightdiv'>
+        
+            Hello world!  
+          </div>
+        
+        </div>
+        <div class='footer'>
+          pics here!
+        </div>
+      </div>
+      
+    </div>
+    
+    
+  
 <%= yield %>
 
 </body>
