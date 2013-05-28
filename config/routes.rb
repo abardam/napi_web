@@ -1,4 +1,10 @@
 NapiWeb::Application.routes.draw do
+  resources :contents
+
+
+  resources :users
+
+
   root :to => 'page#home'
   match 'home' => 'page#home'
   match 'about' => 'page#about'

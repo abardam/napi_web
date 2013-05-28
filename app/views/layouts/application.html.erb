@@ -37,9 +37,11 @@
           <%= yield %>
         </div>
         <div id='footer'>
-          <%= image_tag "footer/#{images[0]}" %>
-          <%= image_tag "footer/#{images[1]}" %>
-          <%= image_tag "footer/#{images[2]}" %>
+          <div id='imageblock'>
+            <%= image_tag "footer/#{images[0]}" %>
+            <%= image_tag "footer/#{images[1]}" %>
+            <%= image_tag "footer/#{images[2]}" %>
+          </div>
         </div>
       </div>
     </div>
