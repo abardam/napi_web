@@ -1,8 +1,9 @@
 <% post = load_post(@current) %>
+<% postit = load_post("postit") %>
 
 <div class='leftdiv'>
   <div id='postit'>
-    <div id='posttext'>Application is now closed!</div>
+    <div id='posttext'><%= postit %></div>
   </div>
 </div>
 <div class='rightdiv'>

@@ -8,6 +8,8 @@ module PageHelper
   end
   
   def load_post(name)
-    Content.where("title = ?", name)[0].post
+    post = Content.where("title = ?", name).first
+    return post.post if post
+    return "Hey, i think you forgot to add content for #{name}!"
   end
 end
