@@ -9,10 +9,11 @@ window.onload = function(){
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   
-  drawLogo(red, blue, green);
+  animateLogo();
 
-  canvas.addEventListener("mouseover", animateLogo);
-  canvas.addEventListener("mouseout", resetLogo);
+
+  //canvas.addEventListener("mouseover", animateLogo);
+  //canvas.addEventListener("mouseout", resetLogo);
 }
 
 window.requestAnimFrame = (function(callback) {
