@@ -4,3 +4,108 @@ font-family: 'Coolvetica Rg';
 src: url('<%= asset_path('coolvetica rg.otf') %>');
 src: url('<%= asset_path('coolvetica rg.ttf') %>') format('truetype');
 }
+
+#headerbg
+{
+padding-top:20px;
+z-index:1;
+}
+
+#headerbanner
+{
+background:black;
+margin-left:75px;
+margin-right:75px;
+-moz-border-radius-topright: 15px;
+-moz-border-radius-topleft: 15px;
+border-top-right-radius: 15px;
+border-top-left-radius: 15px;
+padding: 5px 0 0 10px;
+min-width: 750px;
+}
+
+div#headertextwr
+{
+overflow:hidden;
+float:right;
+min-width:440px;
+}
+
+div.headertext
+{
+min-width:100%;
+text-align:center;
+font:900 14px/22px "Arial", Helvetica, sans-serif;
+height: 100%;
+}
+
+div#a
+{
+line-height: 1.5em;
+font-size: 18px;
+}
+
+div#b
+{
+line-height: 1.5em;
+font-size: 24px;
+}
+
+#headerbar{
+overflow:hidden;
+height: 40px;
+}
+
+ul#headermenu
+{
+padding: 0;
+margin: 0 0;
+list-style:none;
+float:left;
+min-width:100%;
+overflow-y: hidden;
+overflow-x:auto;
+width:700px;
+overflow-y: hidden;
+overflow-x:auto;
+height: 100%;
+}
+
+
+ul li.button
+{
+float:left;
+display:inline;
+margin:0 0;
+min-width:16.66%;
+height: 100%;
+}
+
+ul li.button a
+{
+text-decoration:none;
+float:left;
+color: #999;
+cursor:pointer;
+font:900 14px/22px "Arial", Helvetica, sans-serif;
+margin: 0 0 0 0;
+min-width:100%;
+text-align:center;
+max-height:30px;
+padding-top:10px;
+background:url('gradtest.png');
+height:100%;
+position:relative;
+}
+
+
+ul li.button a span
+{
+margin: 10px 0 0 0;
+padding: 4px 8px 5px 8px;
+position: relative;
+min-width:100%;
+}
+
+ul#headermenu li.button a.current, ul#headermenu li.button a:hover{
+color: white;
