@@ -1,0 +1,54 @@
+<% images = footer_images %>
+<% header = name_list %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NapiWeb</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id='bodywr'>
+      <div id='headerbg'>
+        <div id='headerbanner'>
+          <!--<img src='naist-logo.gif' width=300px/>
+          <div id='headertextwr'>
+            <div class='headertext' id='a'>Nara Institute of Science and Technology</div>
+            <div class='headertext' id='b'>Internship</div>
+            
+          </div>-->
+          <canvas id='canvas' class='headerlogo' width='600' height='95'></canvas>
+        </div>
+        <div id='headerbar'>
+        
+          <ul id='headermenu'>
+            <% header.each do |name| %>
+              <li class='button'><a href= <%= "./#{name}.html" %> <% if @current == name %> class='current shadow' <% end %>><span> <%= name %> </span></a></li>
+            <% end %>
+          
+          </ul>
+        </div>
+      </div>
+      
+      <div id='contentwr'>
+        <div id='content'>
+          <%= yield %>
+        </div>
+        <div id='footer'>
+          <div id='imageblock'>
+            <%= image_tag "footer/#{images[0]}" %>
+            <%= image_tag "footer/#{images[1]}" %>
+            <%= image_tag "footer/#{images[2]}" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+</body>
+</html>
