@@ -1,0 +1,99 @@
+// Place all the styles related to the Page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#bodywr
+{
+width:900px;
+margin: 0 auto;
+}
+
+
+
+body
+{
+background:black;
+margin:0px;
+}
+
+p
+{
+color:red;
+padding-left:5px;
+}
+
+h1.center
+{
+text-align:center;
+}
+
+div#contentwr{
+background-image: linear-gradient(bottom, rgb(255,255,255) 74%, rgb(0,0,0) 0%, rgb(214,214,214) 21%);
+background-image: -o-linear-gradient(bottom, rgb(255,255,255) 74%, rgb(0,0,0) 0%, rgb(214,214,214) 21%);
+background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 74%, rgb(0,0,0) 0%, rgb(214,214,214) 21%);
+background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 74%, rgb(0,0,0) 0%, rgb(214,214,214) 21%);
+background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 74%, rgb(0,0,0) 0%, rgb(214,214,214) 21%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.74, rgb(255,255,255)),
+	color-stop(0, rgb(0,0,0)),
+	color-stop(0.21, rgb(214,214,214))
+);
+height:auto;
+
+
+margin-top:-40px;
+padding-top:40px;
+padding-bottom:100px;
+}
+
+
+div#content{
+z-index:1;
+}
+
+div#postit{
+z-index:3;
+margin: -30px 0 0 10px;
+padding:80px 65px 0 62px;
+background: url( '<%= asset_path('post-it.png') %>' );
+background-repeat:no-repeat;
+height:260px;
+width:331px;
+position:relative;
+pointer-events:none;
+background-size:contain;
+}
+
+div#posttext{
+
+/* Safari */
+-webkit-transform: rotate(-10deg);
+
+/* Firefox */
+-moz-transform: rotate(-10deg);
+
+/* IE */
+-ms-transform: rotate(-10deg);
+
+/* Opera */
+-o-transform: rotate(-10deg);
+
+width: 50%;
+}
+
+div.leftdiv{
+float:left;
+}
+
+div.rightdiv{
+min-height:347px;
+}
+
+div.footer{
+
+
+}
