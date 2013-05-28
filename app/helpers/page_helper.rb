@@ -9,7 +9,7 @@ module PageHelper
   
   def load_post(name)
     post = Content.where("title = ?", name).first
-    return post.post if post
+    return BlueCloth.new(post.post).to_html if post
     return "Hey, i think you forgot to add content for #{name}!"
   end
 end
