@@ -1,16 +1,12 @@
 NapiWeb::Application.routes.draw do
-  get "page/home"
-
-  get "page/about"
-
-  get "page/updates"
-
-  get "page/application"
-
-  get "page/travel"
-
-  get "page/contact"
-
+  root :to => 'page#home'
+  match 'home' => 'page#home'
+  match 'about' => 'page#about'
+  match 'updates' => 'page#updates'
+  match 'application' => 'page#application'
+  match 'travel' => 'page#travel'
+  match 'contact' => 'page#contact'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
