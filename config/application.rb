@@ -4,9 +4,9 @@ require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  # Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
+  Bundler.require(:default, :assets, Rails.env)
 end
 
 module NapiWeb
@@ -60,5 +60,9 @@ module NapiWeb
     config.assets.version = '1.0'
     
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    
+    config.assets.initialize_on_precompile = true
+
+    config.serve_static_assets = false
   end
 end
