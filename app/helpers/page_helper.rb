@@ -4,7 +4,7 @@ module PageHelper
   end
   
   def name_list
-    ["home", "about", "updates", "application", "travel", "contact"]
+    ["home", "about", "laboratories", "updates", "application", "travel", "contact"]
   end
   
   def load_post(name)

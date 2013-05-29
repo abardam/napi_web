@@ -23,4 +23,8 @@ class PageController < ApplicationController
   def contact
     @current = "contact"
   end
+  
+  def laboratories
+    @current = "laboratories"
+  end
 end

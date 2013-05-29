@@ -12,6 +12,7 @@ NapiWeb::Application.routes.draw do
   match 'application' => 'page#application'
   match 'travel' => 'page#travel'
   match 'contact' => 'page#contact'
+  match 'laboratories' => 'page#laboratories'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
