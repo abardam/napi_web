@@ -87,7 +87,7 @@ float:left;
 color: rgb(105, 28, 28);
 cursor:pointer;
 font:900 14px/22px "Arial", Helvetica, sans-serif;
-margin: 0 0 0 0;
+margin: 0 0 0 -2px;
 min-width:100%;
 text-align:center;
 max-height:30px;
@@ -96,6 +96,13 @@ padding-top:10px;
 background-color: rgb(255,61,61);
 height:100%;
 position:relative;
+border-left: 2px solid rgb(197, 41, 41);
+}
+
+ul li.button:first-child a
+{
+  -moz-border-radius-topleft: 15px;
+  border-top-left-radius: 15px;
 }
 
 
@@ -105,6 +112,7 @@ margin: 10px 0 0 0;
 padding: 4px 8px 5px 8px;
 position: relative;
 min-width:100%;
+text-transform: capitalize;
 }
 
 ul#headermenu li.button a.current, ul#headermenu li.button a:hover{
