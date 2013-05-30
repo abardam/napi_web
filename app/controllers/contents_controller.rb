@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+  layout 'scaffold'
   # GET /contents
   # GET /contents.json
   def index
