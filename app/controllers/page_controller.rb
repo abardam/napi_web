@@ -12,7 +12,7 @@ class PageController < ApplicationController
 
   def updates
     @parent = "contact"
-    @current = "contact"
+    @current = "updates"
   end
 
   def application
