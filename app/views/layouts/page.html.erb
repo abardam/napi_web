@@ -26,7 +26,7 @@
         
           <ul id='headermenu'>
             <% header.each do |name| %>
-              <li class='button'><a href= <%= "./#{name.first.first.to_s}.html" %> <% if @current == name.first.first.to_s %> class='current shadow' <% end %>><span> <%= name.first.second.to_s %> </span></a>
+              <li class='button'><a href= <%= "./#{name.first.first.to_s}.html" %> <% if @parent == name.first.first.to_s %> class='current shadow' <% end %>><span> <%= name.first.second.to_s %> </span></a>
                 
                 <ul>
                   <% name.except(name.first.first).each do |drop| %>
