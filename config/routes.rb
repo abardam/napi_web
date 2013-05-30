@@ -2,7 +2,7 @@ NapiWeb::Application.routes.draw do
   resources :contents
 
 
-  resources :users
+  # resources :users
 
 
   root :to => 'page#home'
@@ -13,6 +13,7 @@ NapiWeb::Application.routes.draw do
   match 'travel' => 'page#travel'
   match 'contact' => 'page#contact'
   match 'laboratories' => 'page#laboratories'
+  match 'login' => 'contents#login'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

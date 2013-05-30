@@ -3,6 +3,10 @@ class ContentsController < ApplicationController
   # GET /contents
   # GET /contents.json
   def index
+    if !session[:userid]
+      render '_login.html.erb' and return
+    end
+  
     @contents = Content.all
 
     respond_to do |format|
@@ -14,6 +18,10 @@ class ContentsController < ApplicationController
   # GET /contents/1
   # GET /contents/1.json
   def show
+    if !session[:userid]
+      render '_login.html.erb' and return
+    end
+  
     @content = Content.find(params[:id])
 
     respond_to do |format|
@@ -25,6 +33,10 @@ class ContentsController < ApplicationController
   # GET /contents/new
   # GET /contents/new.json
   def new
+    if !session[:userid]
+      render '_login.html.erb' and return
+    end
+    
     @content = Content.new
 
     respond_to do |format|
@@ -35,12 +47,20 @@ class ContentsController < ApplicationController
 
   # GET /contents/1/edit
   def edit
+    if !session[:userid]
+      render '_login.html.erb' and return
+    end
+    
     @content = Content.find(params[:id])
   end
 
   # POST /contents
   # POST /contents.json
   def create
+    if !session[:userid]
+      render '_login.html.erb' and return
+    end
+    
     @content = Content.new(params[:content])
 
     respond_to do |format|
@@ -57,6 +77,10 @@ class ContentsController < ApplicationController
   # PUT /contents/1
   # PUT /contents/1.json
   def update
+    if !session[:userid]
+      render '_login.html.erb' and return
+    end
+    
     @content = Content.find(params[:id])
 
     respond_to do |format|
@@ -73,6 +97,10 @@ class ContentsController < ApplicationController
   # DELETE /contents/1
   # DELETE /contents/1.json
   def destroy
+    if !session[:userid]
+      render '_login.html.erb' and return
+    end
+    
     @content = Content.find(params[:id])
     @content.destroy
 
@@ -81,4 +109,14 @@ class ContentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def login
+    user = User.where("username = ?", params[:username]).first
+    if user.password == params[:password]
+      session[:userid] = user.id
+      redirect_to :action => :index and return
+    end
+    
+    render '_login.html.erb'
+    end
 end

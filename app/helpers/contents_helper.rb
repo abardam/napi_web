@@ -9,4 +9,5 @@ module ContentsHelper
   def read_post(name)
     BlueCloth.new(name).to_html
   end
+  
 end
