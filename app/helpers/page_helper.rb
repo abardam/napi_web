@@ -6,7 +6,7 @@ module PageHelper
   def name_list
     [{:home => "Home"},
       {:about=> "About", :beginning=>"How it started", :past=>"Past internships"},
-      {:application=>"Application",:guidelines=>"Application guidelines", :laboratories=>"Laboratories"},
+      {:application=>"Application",:guidelines=>"Application guidelines", :laboratories=>"Laboratories", :download=>"Downloads"},
       {:travel=>"Travel"},
       {:post=>"Post internship"},
       {:faq=>"FAQ"},

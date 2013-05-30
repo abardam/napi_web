@@ -19,6 +19,7 @@ NapiWeb::Application.routes.draw do
   match 'post' => 'page#post'
   match 'inquiry' => 'page#inquiry'
   match 'faq' => 'page#faq'
+  match 'download' => 'page#download'
   
   match 'login' => 'contents#login'
   

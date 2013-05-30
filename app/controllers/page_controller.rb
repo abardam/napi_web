@@ -70,4 +70,10 @@ class PageController < ApplicationController
     @current = "faq"
     render 'default.html.erb'
   end
+  
+  def download
+    @parent = "application"
+    @current = "download"
+    render 'default.html.erb'
+  end
 end
