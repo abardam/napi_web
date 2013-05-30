@@ -74,20 +74,18 @@ height: 100%;
 ul li.button
 {
 float:left;
-display:inline;
 margin:0 0;
-min-width: <%= 100/6.0  %>%;
+min-width: <%= 100/7.0  %>%;
 height: 100%;
 }
 
 ul li.button a
 {
 text-decoration:none;
-float:left;
 color: rgb(105, 28, 28);
 cursor:pointer;
 font:900 14px/22px "Arial", Helvetica, sans-serif;
-margin: 0 0 0 -2px;
+margin: 0 0 0 0;
 min-width:100%;
 text-align:center;
 max-height:30px;
@@ -95,8 +93,8 @@ padding-top:10px;
 //background:url('gradtest.png');
 background-color: rgb(255,61,61);
 height:100%;
-position:relative;
-border-left: 2px solid rgb(197, 41, 41);
+display: block;
+white-space: nowrap;
 }
 
 ul li.button:first-child a
@@ -111,10 +109,34 @@ ul li.button a span
 margin: 10px 0 0 0;
 padding: 4px 8px 5px 8px;
 position: relative;
-min-width:100%;
-text-transform: capitalize;
 }
 
-ul#headermenu li.button a.current, ul#headermenu li.button a:hover{
+ul#headermenu li.button a.current{
+  color: white;
+}
+ul#headermenu li.button a:hover{
 color: white;
+}
+ul#headermenu li.button:hover, ul#headermenu li.button:hover a{
+  z-index:6;
+}
+
+li ul {
+    display: none;
+    list-style: none;
+}
+
+li:hover ul {
+    display: block;
+    position: absolute;
+    z-index: 5;
+}
+li:hover li {
+    float: none;
+    margin-left: -45px;
+}
+
+li:hover li a {
+  padding: 10px;
+  text-align: left;
 }

@@ -4,7 +4,14 @@ module PageHelper
   end
   
   def name_list
-    ["home", "about", "application", "laboratories", "travel", "contact"]
+    [{:home => "Home"},
+      {:about=> "About", :beginning=>"How it started", :past=>"Past internships"},
+      {:application=>"Application",:guidelines=>"Application guidelines", :laboratories=>"Laboratories"},
+      {:travel=>"Travel"},
+      {:post=>"Post internship"},
+      {:faq=>"FAQ"},
+      {:contact=>"Contact", :inquiry=>"Send an inquiry", :updates=>"Live updates"}
+    ]
   end
   
   def load_post(name)

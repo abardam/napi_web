@@ -1,7 +1,6 @@
 <% images = footer_images %>
 <% header = name_list %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +26,14 @@
         
           <ul id='headermenu'>
             <% header.each do |name| %>
-              <li class='button'><a href= <%= "./#{name}.html" %> <% if @current == name %> class='current shadow' <% end %>><span> <%= name %> </span></a></li>
+              <li class='button'><a href= <%= "./#{name.first.first.to_s}.html" %> <% if @current == name.first.first.to_s %> class='current shadow' <% end %>><span> <%= name.first.second.to_s %> </span></a>
+                
+                <ul>
+                  <% name.except(name.first.first).each do |drop| %>
+                    <li><a href="<%= "./#{drop.first.to_s}.html" %>"><%= drop.second.to_s %></a></li>
+                  <% end %>
+                </ul>
+              </li>
             <% end %>
           
           </ul>
