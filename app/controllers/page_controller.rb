@@ -64,4 +64,10 @@ class PageController < ApplicationController
     @current = "post"
     render 'default.html.erb'
   end
+  
+  def faq
+    @parent = "faq"
+    @current = "faq"
+    render 'default.html.erb'
+  end
 end
