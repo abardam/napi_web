@@ -26,11 +26,11 @@
         
           <ul id='headermenu'>
             <% header.each do |name| %>
-              <li class='button'><a href= <%= "./#{name.first.first.to_s}.html" %> <% if @parent == name.first.first.to_s %> class='current shadow' <% end %>><span> <%= name.first.second.to_s %> </span></a>
+              <li class='button'><a href= <%= "/#{name.first.first.to_s}.html" %> <% if @parent == name.first.first.to_s %> class='current shadow' <% end %>><span> <%= name.first.second.to_s %> </span></a>
                 
                 <ul>
                   <% name.except(name.first.first).each do |drop| %>
-                    <li><a href="<%= "./#{drop.first.to_s}.html" %>"><%= drop.second.to_s %></a></li>
+                    <li><a href="<%= "/#{drop.first.to_s}.html" %>"><%= drop.second.to_s %></a></li>
                   <% end %>
                 </ul>
               </li>
