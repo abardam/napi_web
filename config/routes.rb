@@ -8,7 +8,7 @@ NapiWeb::Application.routes.draw do
   root :to => 'page#home'
   match 'home' => 'page#home'
   match 'about' => 'page#about'
-  match 'updates' => 'page#updates'
+  # match 'updates' => 'page#updates'
   match 'application' => 'page#application'
   match 'travel' => 'page#travel'
   match 'contact' => 'page#contact'
