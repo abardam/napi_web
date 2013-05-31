@@ -3,6 +3,10 @@ module PageHelper
     (Dir.entries("./app/assets/images/footer") - [".", ".."]).shuffle[0..3]
   end
   
+  def napi_images(page)
+    (Dir.entries("./app/assets/images/napi") - [".", ".."])[(page-1)*10...(page)*10]
+  end
+  
   def name_list
     [{:home => "Home"},
       {:about=> "History", :beginning=>"How it started", :past=>"Past internships"},

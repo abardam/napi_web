@@ -1,0 +1,11 @@
+<% images = napi_images @page %>
+<div><%= link_to "Prev", :action => "images", :page => @page-1 %>
+<%= link_to "Next", :action => "images", :page => @page+1 %></div>
+
+<% images.each do |filename| %>
+  <div><%= image_tag "napi/#{filename}" %></div>
+  <div>![Alt text](/assets/napi/<%=filename%>)</div>
+<% end %>
+
+<div><%= link_to "Prev", :action => "images", :page => @page-1 %>
+<%= link_to "Next", :action => "images", :page => @page+1 %></div>

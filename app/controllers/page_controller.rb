@@ -76,4 +76,17 @@ class PageController < ApplicationController
     @current = "download"
     render 'default.html.erb'
   end
+  
+  def images
+    if params[:page]
+      @page = params[:page].to_i
+    else
+      @page = 1
+    end
+    
+    if @page < 1
+      @page = 1
+    end
+    
+  end
 end

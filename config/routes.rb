@@ -22,6 +22,8 @@ NapiWeb::Application.routes.draw do
   match 'download' => 'page#download'
   
   match 'login' => 'contents#login'
+  match 'images' => 'page#images'
+  match 'images/:page' => 'page#images'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
