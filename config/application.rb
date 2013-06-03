@@ -60,6 +60,7 @@ module NapiWeb
     config.assets.version = '1.0'
     
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    config.assets.paths << "#{Rails.root}/app/assets/files"
     
     config.assets.initialize_on_precompile = true
 
