@@ -9,12 +9,12 @@ module PageHelper
   
   def name_list
     [{:home => "Home"},
-      {:about=> "History", :beginning=>"How it started", :past=>"Past internships"},
+      {:about=> "History", :past=>"Past internships"},
       {:application=>"Application",:guidelines=>"Guidelines", :laboratories=>"Laboratories", :download=>"Downloads"},
       {:travel=>"Travel"},
       {:post=>"Post internship"},
       {:faq=>"FAQ"},
-      {:contact=>"Contact", :inquiry=>"Send an inquiry"}
+      {:contact=>"Contact"}
     ]
   end
   
